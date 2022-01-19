@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% block content %}
+
+    <div class="flex">
+        <div class="hidden md:block md:w-72 bg-gray-50 h-screen">
+            {#      sidebar      #}
+            {% include 'components/sidebar.html' %}
+        </div>
+
+        <div class="grow">
+            <p class="text-2xl py-4 px-8 shadow-sm tracking-wide bg-blue-600 text-white">
+                Dashboard
+            </p>
+
+            {% block body %}
+
+            {% endblock %}
+
+            {% include 'components/create_button.html' %}
+        </div>
+    </div>
+
+{% endblock %}

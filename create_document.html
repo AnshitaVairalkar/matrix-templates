@@ -1,0 +1,42 @@
+{% extends 'dashboard_template.html' %}
+{% block body %}
+
+    <div class="mx-8 text-xl">
+        <div>
+            <form action="" class=" mt-6 space-y-4">
+                <h1 class="text-2xl font-bold sm:text-3xl font-mono">Create</h1>
+                <div>
+                    <div class="relative">
+                        <label for="title" class="text-sm font-medium">Title</label>
+                        <input
+                                type="text" id="title"
+                                class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg"
+                                style="box-shadow: rgba(0, 0, 0, 0.12) 0 1px 4px"
+                        />
+                    </div>
+                </div>
+
+                <div>
+                    <div class="relative">
+                        <label for="content" class="text-sm font-medium">Content</label>
+                        <textarea
+                                id="content" rows="16"
+                                class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg"
+                                style="box-shadow: rgba(0, 0, 0, 0.12) 0 1px 4px"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <button
+                        type="submit"
+                        class="w-1/2 px-5 py-3 text-sm font-medium
+                                text-white bg-blue-600 rounded-lg hover:bg-blue-700"
+                >
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+
+    {% include 'components/create_button.html' %}
+{% endblock %}
